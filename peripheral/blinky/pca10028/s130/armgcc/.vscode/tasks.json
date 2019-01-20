@@ -1,0 +1,61 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build s130",
+            "type": "shell",
+            "command": "${env:GNU_TOOLS}/make",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "clean s130",
+            "type": "shell",
+            "command": "${env:GNU_TOOLS}/make clean",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "flash s130",
+            "type": "shell",
+            "command": "${env:GNU_TOOLS}/make flash",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "flash_softdevice s130",
+            "type": "shell",
+            "command": "${env:GNU_TOOLS}/make flash_softdevice",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "sdk_config s130",
+            "type": "shell",
+            "command": "${env:GNU_TOOLS}/make sdk_config",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "erase",
+            "type": "shell",
+            "command": "nrfjprog --eraseall"
+        }
+    ]
+}

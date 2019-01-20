@@ -1,0 +1,34 @@
+{
+    "configurations": [
+        {
+            "name": "pca10028/s130",
+            "includePath": [
+                "${workspaceFolder}/pca10028/s130/config",
+                "${env:NRF_SDK}/**"
+            ],
+            "browse": {
+                "path": [
+                    "${workspaceFolder}/pca10028/s130/config",
+                    "${env:NRF_SDK}/**"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            },
+            "defines": [
+                "BOARD_PCA10028",
+                "CONFIG_GPIO_AS_PINRESET",
+                "FLOAT_ABI_HARD",
+                "NRF51822_XXAA",
+                "NRF_SD_BLE_API_VERSION=2",
+                "S130",
+                "SOFTDEVICE_PRESENT",
+                "SWI_DISABLE0"
+            ],
+            "compilerPath": "${env:GNU_GCC}/arm-none-eabi-gcc.exe",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "clang-x64"
+        }
+    ],
+    "version": 4
+}

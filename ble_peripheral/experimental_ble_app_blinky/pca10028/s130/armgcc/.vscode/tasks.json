@@ -1,0 +1,63 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "${env:GNU_TOOLS}/make",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "clean",
+            "type": "shell",
+            "command": "${env:GNU_TOOLS}/make clean",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "flash",
+            "type": "shell",
+            "command": "${env:GNU_TOOLS}/make flash",
+           //"command":"nrfjprog -f nrf51 --sectorerase --program C:/Nordic/nRF5_SDK_12.3.0/examples/ble_peripheral/experimental_ble_app_blinky/hex/experimental_ble_app_blinky_pca10028_s130.hex --reset",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "flash_softdevice",
+            "type": "shell",
+            "command": "${env:GNU_TOOLS}/make flash_softdevice",
+            //"command": "nrfjprog.exe --family NRF51 --program C:/Nordic/nRF5_SDK_12.3.0/components/softdevice/s130/hex/s130_nrf51_2.0.1_softdevice.hex --chiperase --verify",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "sdk_config",
+            "type": "shell",
+            "command": "${env:GNU_TOOLS}/make sdk_config",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "erase all",
+            "type": "shell",
+            "command": "nrfjprog --eraseall"
+        }
+    ]
+}

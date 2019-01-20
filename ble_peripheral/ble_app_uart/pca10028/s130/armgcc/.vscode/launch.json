@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "jlink",
+            "cwd": "${workspaceRoot}",
+            "executable": "./_build/nrf51822_xxaa.out",
+            "name": "Debug (J-Link)",
+            "device": "nRF51822_xxAA",
+            "interface": "swd",
+            "ipAddress": null,
+            "serialNumber": null,
+            "runToMain": true,
+            //"preLaunchTask": "build"
+        }
+    ]
+}

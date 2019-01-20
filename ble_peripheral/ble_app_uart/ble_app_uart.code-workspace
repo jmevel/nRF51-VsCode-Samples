@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+                        "name": "BLE UART Example",
+			"path": "."
+		},
+		{
+                        "name": "PCA10028/s130",
+			"path": "pca10028/s130/armgcc"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"boards.h": "c",
+			"pca10028.h": "c",
+			"nrf_delay.h": "c"
+		}
+	}
+}
